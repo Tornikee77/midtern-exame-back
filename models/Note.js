@@ -1,3 +1,5 @@
+const mongoose = require("mongoose");
+
 const noteSchema = new mongoose.Schema(
   {
     title: { type: String, required: [true, "title is required"] },
@@ -10,3 +12,5 @@ const noteSchema = new mongoose.Schema(
 );
 
 const Note = mongoose.model("Note", noteSchema);
+
+module.exports = Note;
